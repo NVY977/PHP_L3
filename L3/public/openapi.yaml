@@ -549,7 +549,7 @@ paths:
       summary: Put tournament by id
       operationId: putTournament
       tags:
-        - teams
+        - tournaments
       parameters:
         - name: tournament_id
           in: path
