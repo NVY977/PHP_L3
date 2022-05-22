@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+        Schema::create('teams', function (Blueprint $table) {
+            $table->increments('id')->unique();
+            $table->integer('tournament_id');
+            $table->foreign('tournament_id')->references('id')->on('tournaments')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->string('title');
+            $table->string('color');
+            $table->string('city');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('teams');
     }
 };
