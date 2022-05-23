@@ -20,7 +20,7 @@ class PlayerController
     public function getList(GetAllPlayersAction $action)
     {
         $players = $action->execute();
-        return response()->json($players);
+        return response()->json(["data" => $players]);
     }
 
     public function get(GetPlayerAction $action, int $id)

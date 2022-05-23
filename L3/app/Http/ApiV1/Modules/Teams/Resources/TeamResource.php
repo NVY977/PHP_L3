@@ -14,8 +14,6 @@ class TeamResource extends BaseJsonResource
             'title' => $this->title,
             'color' => $this->color,
             'city' => $this->city,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
         ];
     }
 }

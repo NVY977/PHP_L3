@@ -9,6 +9,7 @@ class PatchTeamRequest extends BaseFormRequest
     public function rules(): array
     {
         return [
+            'tournament_id' => 'required|exists:tournaments,id',
             'title' => 'required|string|max:100',
             'color' => 'required|string|max:50',
             'city' => 'required|string|max:75',

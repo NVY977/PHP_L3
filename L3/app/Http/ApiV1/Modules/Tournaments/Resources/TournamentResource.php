@@ -13,8 +13,6 @@ class TournamentResource extends BaseJsonResource
             'title' => $this->title,
             'prize' => $this->prize,
             'city' => $this->city,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
         ];
     }
 }

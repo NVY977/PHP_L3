@@ -15,8 +15,6 @@ class PlayerResource extends BaseJsonResource
             'lastname' => $this->lastname,
             'age' => $this->age,
             'city' => $this->city,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
         ];
     }
 }

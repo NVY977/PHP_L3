@@ -29,7 +29,7 @@ class TournamentController
     public function getList(GetAllTournamentsAction $action)
     {
         $tournaments = $action->execute();
-        return response()->json($tournaments);
+        return response()->json(["data" => $tournaments]);
     }
 
     public function get(GetTournamentAction $action, int $id)

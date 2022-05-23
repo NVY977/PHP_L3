@@ -9,6 +9,7 @@ class PatchPlayerRequest extends BaseFormRequest
     public function rules(): array
     {
         return [
+            'team_id' => 'required|exists:teams,id',
             'name' => 'required|string|max:100',
             'lastname' => 'required|string|max:100',
             'age' => 'required|integer',

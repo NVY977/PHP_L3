@@ -3,6 +3,7 @@
 namespace App\Http\ApiV1\Modules\Teams\Controllers;
 
 use App\Domain\Players\Actions\DeletePlayerAction;
+use App\Domain\Teams\Actions\DeleteTeamAction;
 use App\Domain\Teams\Actions\GetAllTeamsAction;
 use App\Domain\Teams\Actions\GetTeamAction;
 use App\Domain\Teams\Actions\PatchTeamAction;
@@ -18,8 +19,8 @@ class TeamController
 {
     public function getList(GetAllTeamsAction $action)
     {
-        $players = $action->execute();
-        return response()->json($players);
+        $teams = $action->execute();
+        return response()->json(["data" => $teams]);
     }
 
     public function get(GetTeamAction $action, int $id)
@@ -32,7 +33,7 @@ class TeamController
         return new TeamResource($action->execute($request->validated()));
     }
 
-    public function delete(DeletePlayerAction $action, int $id): JsonResponse
+    public function delete(DeleteTeamAction $action, int $id): JsonResponse
     {
         $action->execute($id);
         return response()->json(["data" => null]);

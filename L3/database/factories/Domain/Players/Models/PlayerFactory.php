@@ -3,6 +3,7 @@
 namespace Database\Factories\Domain\Players\Models;
 
 use App\Domain\Players\Models\Player;
+use App\Domain\Teams\Models\Team;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -20,6 +21,7 @@ class PlayerFactory extends Factory
     public function definition()
     {
         return [
+            'team_id' => Team::factory(),
             'name' => $this->faker->firstNameMale(),
             'lastname' => $this->faker->lastName(),
             'age' => $this->faker->numberBetween(0, 40),
