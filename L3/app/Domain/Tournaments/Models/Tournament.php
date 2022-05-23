@@ -15,8 +15,6 @@ class Tournament extends Model
      *
      * @var string
      */
-    protected $table = 'tournaments';
-
     protected $fillable = [
         'title',
         'prize',

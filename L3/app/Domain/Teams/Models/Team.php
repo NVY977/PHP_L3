@@ -16,8 +16,6 @@ class Team extends Model
      *
      * @var string
      */
-    protected $table = 'teams';
-
     protected $fillable = [
         'tournament_id',
         'title',

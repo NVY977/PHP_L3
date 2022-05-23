@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 class TournamentFactory extends Factory
 {
     protected $model = Tournament::class;
+
     /**
      * Define the model's default state.
      *

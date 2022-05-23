@@ -15,8 +15,6 @@ class Player extends Model
      *
      * @var string
      */
-    protected $table = 'players';
-
     protected $fillable = [
         'team_id',
         'name',

@@ -708,9 +708,9 @@ components:
         city:
           type: string
     Tournaments:
-        type: array
-        items:
-          $ref: "#/components/schemas/Tournament"
+      type: array
+      items:
+        $ref: "#/components/schemas/Tournament"
     Team:
       type: object
       required:

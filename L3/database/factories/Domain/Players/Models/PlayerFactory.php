@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 class PlayerFactory extends Factory
 {
     protected $model = Player::class;
+
     /**
      * Define the model's default state.
      *

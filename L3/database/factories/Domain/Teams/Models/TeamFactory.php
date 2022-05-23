@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 class TeamFactory extends Factory
 {
     protected $model = Team::class;
+
     /**
      * Define the model's default state.
      *
